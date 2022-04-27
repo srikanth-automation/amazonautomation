@@ -1,0 +1,26 @@
+package configRead;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.*;
+import org.testng.annotations.Test;
+
+public class Readdata {
+	WebDriver driver;
+@Test
+
+public void readdata() throws IOException{
+String XSSFXSSFWorkbook;
+String XSFFCell;
+String XSFFsheet;
+
+FileInputStream fs = new FileInputStream("‪D://sampledata");
+XSSFWorkbook workbook = new XSSFWorkbook(fs);
+XSSFSheet sheet = workbook.getSheetAt(0);
+sheet.getLastRowNum();
+
+}
+
+}

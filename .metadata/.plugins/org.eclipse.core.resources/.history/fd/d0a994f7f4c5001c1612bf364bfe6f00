@@ -1,0 +1,33 @@
+package hrmtest;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Amazonweb {
+
+WebDriver driver;
+
+@BeforeTest
+
+public void setup() {
+	
+WebDriverManager.chromedriver().setup();
+System.setProperty("webdriver.chrome.driver", "D:\\Chrome Driver/chromedriver.exe");
+ WebDriver driver =new ChromeDriver();
+}
+@Test
+public void launch() {
+	
+driver.get("https://amazon.com");
+driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS) ;	
+}
+	
+
+
+}

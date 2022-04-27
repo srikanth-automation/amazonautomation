@@ -1,0 +1,20 @@
+package configRead;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.openqa.selenium.*;
+
+public class Readdata {
+
+WebDriver driver;
+String XSSFXSSFWorkbook;
+String XSFFCell;
+String XSFFsheet;
+
+FileInputStream fs = new FileInputStream("D:\\Testdata.xlsx");
+XSSFWorkbook workbook = new XSSFWorkbook(fs);
+XSSFSheet sheet = workbook.getSheetAt(0);
+
+
+
+}
